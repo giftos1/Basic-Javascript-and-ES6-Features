@@ -1,5 +1,10 @@
 // testing out basic javascript and ES6 features
 
+/*When you declare a variable with the let keyword inside a block, statement, or expression
+* its scope is limited to that block, statement, or expression
+* As a preference you can assign all your variables using const by default, unless they know they'll need to reassign values.
+* NB: Some developers do this.*/
+
 const firstName = "Gift";
 const secondName = "Ogingo";
 const myName = firstName + ' ' + secondName;
@@ -67,7 +72,7 @@ console.log(a, b);
 const [y, z, ...thirdArray] = [2, 4, 5, 6 ,7 ,8, 10];
 console.log(y, z, thirdArray);
 
-thirdArray.unshift(myName);
+thirdArray.unshift(maxNumber);
 console.log(thirdArray);
 
 // create strings using template literals
@@ -81,3 +86,22 @@ He is a ${randomUser.racialOrigin}.`);
 // use arrow functions to write concise anonymous functions
 const displayMyAge = () => `I am ${myAge} years old.`;
 console.log(displayMyAge());
+
+//set default parameters for your functions
+
+const reaction = (lastName = "Anonymous") => "Hurray " + lastName + " !";
+console.log(reaction("Gifto"));
+
+// write arrow functions with parameters
+
+const triple = (number) => number * 3;
+console.log(triple(30));
+
+// Prevent object mutation
+
+let obj = {
+    name: "Gift Ogingo",
+    situation: "Not Critical"
+};
+Object.freeze(obj); // prevent property values from being changed
+console.log(obj.name + "\n" + obj.situation);
