@@ -70,3 +70,8 @@ for (let i = 0; i < colors.length; i++) {
 // append data to the end of an array
 colors.push(["black"]);
 console.log(colors);
+
+// add elements at the beginning of an array
+colors.unshift(["purple unshifted"]);
+console.log(colors);
+

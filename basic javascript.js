@@ -105,3 +105,8 @@ let obj = {
 };
 Object.freeze(obj); // prevent property values from being changed
 console.log(obj.name + "\n" + obj.situation);
+
+// split method
+let text = "How are you doing today?";
+const textArray = text.split(" ");
+console.log(textArray)
